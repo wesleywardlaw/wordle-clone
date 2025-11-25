@@ -165,9 +165,9 @@ const App = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(5, min(60px, 16vw))",
-            rowGap: "6px",
-            columnGap: "min(10px, 2vw)",
+            gridTemplateColumns: "repeat(5, clamp(40px, 14vw, 60px))",
+            rowGap: "clamp(4px, 1vw, 6px)",
+            columnGap: "clamp(2px, 2vw, 10px)",
           }}
         >
           {grid.map((row, rowIndex) => {

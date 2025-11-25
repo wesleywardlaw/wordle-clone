@@ -45,7 +45,10 @@ const Keyboard: React.FC<KeyboardProps> = ({
       style={{
         marginTop: "20px",
         width: "100%",
-        maxWidth: "500px",
+        maxWidth: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         padding: "0 4px",
       }}
     >
@@ -56,6 +59,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
             display: "flex",
             justifyContent: "center",
             marginBottom: "6px",
+            width: "100%",
           }}
         >
           {row.map((key) => (
@@ -63,10 +67,13 @@ const Keyboard: React.FC<KeyboardProps> = ({
               key={key}
               onClick={() => onKeyPress(key)}
               style={{
-                height: "58px",
+                flex: "1",
+                height: "clamp(40px, 12vw, 58px)",
                 minWidth:
-                  key === "Enter" || key === "Backspace" ? "65px" : "43px",
-                margin: "0 3px",
+                  key === "Enter" || key === "Backspace"
+                    ? "clamp(50px, 14vw, 65px)"
+                    : "clamp(30px, 8vw, 43px)",
+                margin: "0 2px",
                 borderRadius: "4px",
                 border: "none",
                 backgroundColor: getKeyColor(key),
@@ -74,8 +81,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
                 fontWeight: "bold",
                 cursor: "pointer",
                 fontFamily: "Clear Sans",
-                fontSize:
-                  key === "Enter" || key === "Backspace" ? "12px" : "14px",
+                fontSize: "clamp(10px, 3vw, 14px)",
               }}
             >
               {key === "Backspace" ? "⌫" : key}
