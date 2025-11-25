@@ -57,11 +57,10 @@ const App = () => {
           )
         ) {
           setMessage("NOT A VALID WORD");
-          setTimeout(() => {
-            setMessage("");
-          }, 500);
           return;
         }
+
+        setMessage("");
 
         const guess = grid[currentRow];
         if (guess.join("") === word) {
