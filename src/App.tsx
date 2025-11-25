@@ -210,7 +210,7 @@ const App = () => {
                     justifyContent: "center",
                     alignItems: "center",
                     height: "min(60px, 16vw)",
-                    width: "min(60px, 16vw",
+                    width: "min(60px, 16vw)",
                     backgroundColor: colors[rowIndex][cellIndex],
                     fontSize: "min(32px, 8vw)",
                     fontFamily: "Clear Sans",
