@@ -164,9 +164,9 @@ const App = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(5, clamp(40px, 14vw, 60px))",
-            rowGap: "clamp(4px, 1vw, 6px)",
-            columnGap: "clamp(2px, 2vw, 10px)",
+            gridTemplateColumns: "repeat(5, clamp(40px, 14vw, 48px))",
+            rowGap: "clamp(2px, 1vw, 6px)",
+            columnGap: "clamp(2px, 1vw, 6px)",
           }}
         >
           {grid.map((row, rowIndex) => {
