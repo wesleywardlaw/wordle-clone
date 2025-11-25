@@ -154,19 +154,20 @@ const App = () => {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           alignItems: "center",
           flexDirection: "column",
-          height: "100vh",
+          minHeight: "100vh",
+          paddingTop: "20px",
         }}
       >
         {<h1 style={{ height: "40px" }}>{message}</h1>}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(5, 62px)",
+            gridTemplateColumns: "repeat(5, min(60px, 16vw))",
             rowGap: "6px",
-            columnGap: "10px",
+            columnGap: "min(10px, 2vw)",
           }}
         >
           {grid.map((row, rowIndex) => {
@@ -208,10 +209,10 @@ const App = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: "62px",
-                    width: "62px",
+                    height: "min(60px, 16vw)",
+                    width: "min(60px, 16vw",
                     backgroundColor: colors[rowIndex][cellIndex],
-                    fontSize: "32px",
+                    fontSize: "min(32px, 8vw)",
                     fontFamily: "Clear Sans",
                     fontWeight: "bold",
                     color:

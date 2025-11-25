@@ -41,7 +41,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
   };
 
   return (
-    <div style={{ marginTop: "20px" }}>
+    <div style={{ marginTop: "20px", width: "100%", maxWidth: "500px" }}>
       {keyboardRows.map((row, rowIndex) => (
         <div
           key={rowIndex}
@@ -58,7 +58,7 @@ const Keyboard: React.FC<KeyboardProps> = ({
               style={{
                 height: "58px",
                 minWidth:
-                  key === "Enter" || key === "Backspace" ? "70px" : "43px",
+                  key === "Enter" || key === "Backspace" ? "80px" : "43px",
                 margin: "3px",
                 borderRadius: "4px",
                 border: "none",
